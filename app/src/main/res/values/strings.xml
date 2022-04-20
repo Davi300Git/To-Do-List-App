@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">To Do List App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Cad Tarefa -->
+    <string name="Cad_Tarefa_Title">Digite Título da Tarefa</string>
+    <string name="Cad_Tarefa_Descricao">Informe a Descricao</string>
+    <string name="Cad_Tarefa_DataP">Insira a Data Prevista</string>
+    <string name="Cad_Tarefa_SeleData">Selecione a Data</string>
+    <string name="Cad_Tarefa_Salvar">Salvar</string>
+
+
+</resources>

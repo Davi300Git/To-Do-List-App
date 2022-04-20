@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cadTarefaFragment">
+
+    <fragment
+        android:id="@+id/cadSubtarefaFragment"
+        android:name="com.example.todolistapp.fragment.CadSubtarefaFragment"
+        android:label="fragment_cad_subtarefa"
+        tools:layout="@layout/fragment_cad_subtarefa" />
+    <fragment
+        android:id="@+id/cadTarefaFragment"
+        android:name="com.example.todolistapp.fragment.CadTarefaFragment"
+        android:label="fragment_cad_tarefa1"
+        tools:layout="@layout/fragment_cad_tarefa1" />
+    <fragment
+        android:id="@+id/detalheTarefaFragment"
+        android:name="com.example.todolistapp.fragment.DetalheTarefaFragment"
+        android:label="fragment_detalhe_tarefa"
+        tools:layout="@layout/fragment_detalhe_tarefa" >
+        <action
+            android:id="@+id/action_detalheTarefaFragment_to_cadSubtarefaFragment"
+            app:destination="@id/cadSubtarefaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/principalFragment3"
+        android:name="com.example.todolistapp.fragment.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFragment3_to_cadTarefaFragment"
+            app:destination="@id/cadTarefaFragment" />
+        <action
+            android:id="@+id/action_principalFragment3_to_detalheTarefaFragment"
+            app:destination="@id/detalheTarefaFragment" />
+    </fragment>
+</navigation>

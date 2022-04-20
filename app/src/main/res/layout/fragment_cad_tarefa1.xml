@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.CadTarefaFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/Cad_Tarefa_Title"
+
+            />
+        <EditText
+            android:id="@+id/et_nome_tarefa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title"
+        >
+
+        <TextView
+            android:inputType="textCapSentences|textMultiLine"
+            android:lines="4"
+            android:gravity="top"
+            android:id="@+id/tv_descricoa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/Cad_Tarefa_Descricao"
+
+            />
+        <EditText
+            android:id="@+id/et_descricao_tarefa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/layout_seDatabotao"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_descricao"
+            android:text="@string/Cad_Tarefa_SeleData"
+
+            />
+    <Button
+        android:id="@+id/layout_salvar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_seDatabotao"
+        android:text="@string/Cad_Tarefa_Salvar"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
