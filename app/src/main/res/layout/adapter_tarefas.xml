@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/title_ada_tare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:background="@color/blue_200"
+
+        >
+        <TextView
+            android:id="@+id/tv_title_ada_tare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_ada_tare"
+            android:textSize="20dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_Data_Prevista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data_prevista_adapter_tarefa"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/tv_status_adapter_tarefa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/status_adapter_tarefa"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:background="@color/blue_100"
+            android:textColor="@color/blue_300"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,5 +10,9 @@
     <string name="Cad_Tarefa_SeleData">Selecione a Data</string>
     <string name="Cad_Tarefa_Salvar">Salvar</string>
 
+    <!--adapter Tarefa -->
+    <string name="title_ada_tare">Nome da Lista</string>
+    <string name="data_prevista_adapter_tarefa">Data Prevista</string>
+    <string name="status_adapter_tarefa">Status</string>
 
 </resources>

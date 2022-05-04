@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cadTarefaFragment">
+    app:startDestination="@id/principalFragment3">
 
     <fragment
         android:id="@+id/cadSubtarefaFragment"
@@ -13,7 +13,7 @@
     <fragment
         android:id="@+id/cadTarefaFragment"
         android:name="com.example.todolistapp.fragment.CadTarefaFragment"
-        android:label="fragment_cad_tarefa1"
+        android:label="Cadastrar Tarefa"
         tools:layout="@layout/fragment_cad_tarefa1" />
     <fragment
         android:id="@+id/detalheTarefaFragment"
@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/principalFragment3"
         android:name="com.example.todolistapp.fragment.PrincipalFragment"
-        android:label="fragment_principal"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_principal" >
         <action
             android:id="@+id/action_principalFragment3_to_cadTarefaFragment"
