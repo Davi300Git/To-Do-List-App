@@ -15,4 +15,18 @@
     <string name="data_prevista_adapter_tarefa">Data Prevista</string>
     <string name="status_adapter_tarefa">Status</string>
 
+    <!-- detalhes da tarefa -->
+    <string name="title_do_deta">Nome da Lista</string>
+    <string name="data_prevista_deta_tarefa">Data Prevista</string>
+    <string name="status_deta">Status</string>
+
+    <!-- subtarefa-->
+    <string name="cad_subTarefa_Title">Digite a Descrição</string>
+    <string name="foto_subTarefa">Tire uma foto</string>
+
+    <!-- menu -->
+    <string name="salvar_menu">Salvar</string>
+    <string name="origem_imagem">Qual a origem da imagem?</string>
+    <string name="camera">Camera</string>
+    <string name="galeria">Galeria</string>
 </resources>

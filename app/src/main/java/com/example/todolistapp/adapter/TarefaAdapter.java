@@ -1,6 +1,7 @@
 package com.example.todolistapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,23 +9,28 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.todolistapp.R;
 import com.example.todolistapp.model.Tarefa;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>{
+public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder> {
     // variável para a lista de tarefas
     private List<Tarefa> tarefas;
 
     // variável para o Context
     private Context context;
 
+    // variável par ao listener
+    private OnTarefaClickListener listenerTarefa;
+
     //construtor que recebe os paarametros para o Adapter
-    public TarefaAdapter(List<Tarefa> lista, Context context){
+    public TarefaAdapter(List<Tarefa> lista, Context context, OnTarefaClickListener listenerTarefa) {
         this.tarefas = lista;
         this.context = context;
+        this.listenerTarefa = listenerTarefa;
     }
 
     @NonNull
@@ -49,24 +55,29 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         holder.tvData.setText(formatador.format(t.getDataPrevista()));
 
         //verifica se está concluida
-       if (t.isConcluida()) {
-           holder.tvStatus.setText("Finalizada");
-           holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.Secondary_500));
-       }else {
-           holder.tvStatus.setText("Aberta");
-           holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.red_300));
-       }
+        if (t.isConcluida()) {
+            holder.tvStatus.setText("Finalizada");
+            holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.blue_100));
+        } else {
+            holder.tvStatus.setText("Aberta");
+            holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.Secondary_500));
+        }
+
+        // implementa o click na tarefa
+        holder.itemView.setOnClickListener(v -> {
+           listenerTarefa.OnClick(v, t);
+        });
     }
 
     @Override
     public int getItemCount() {
         if (tarefas != null) {
-            return  tarefas.size();
+            return tarefas.size();
         }
         return 0;
     }
 
-    class TarefaViewHolder extends RecyclerView.ViewHolder{
+    class TarefaViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvTitulo, tvData, tvStatus;
 
@@ -77,6 +88,11 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
             tvData = view.findViewById(R.id.tv_Data_Prevista);
             tvStatus = view.findViewById(R.id.tv_status_adapter_tarefa);
         }
+    }
+
+    // interface para o click na tarefa
+    public interface OnTarefaClickListener {
+        void OnClick(View v, Tarefa t);
     }
 
 }
